@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/notekeeper/static/css/main.be33dc81.css",
+    "main.js": "/notekeeper/static/js/main.b0c09153.js",
+    "static/js/453.c31d7132.chunk.js": "/notekeeper/static/js/453.c31d7132.chunk.js",
+    "index.html": "/notekeeper/index.html",
+    "main.be33dc81.css.map": "/notekeeper/static/css/main.be33dc81.css.map",
+    "main.b0c09153.js.map": "/notekeeper/static/js/main.b0c09153.js.map",
+    "453.c31d7132.chunk.js.map": "/notekeeper/static/js/453.c31d7132.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be33dc81.css",
+    "static/js/main.b0c09153.js"
+  ]
+}
