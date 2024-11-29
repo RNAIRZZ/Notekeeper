@@ -1,0 +1,266 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f4ec; /* Beige background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Container for App */
+.App {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 3px solid #000; /* Thicker black border */
+}
+
+/* Form Styles */
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 3px solid #ddd; /* Thicker bottom border */
+  padding-bottom: 20px;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 12px; /* Increased padding */
+  font-size: 16px;
+  border: 2px solid #000; /* Thicker black border */
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  border-color: #f5b041; /* Accent color on focus */
+}
+
+.note-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.note-form button {
+  background-color: #f5b041;
+  color: white;
+  border: 3px solid #000; /* Thicker black border */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-form button:hover {
+  background-color: #e8a137;
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.note-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #000; /* Thicker black border */
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.note-card h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.note-card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.note-card button {
+  background-color: #d9534f;
+  color: white;
+  border: 3px solid #000; /* Thicker black border */
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-card button:hover {
+  background-color: #c9302c;
+}
+
+.note-card button:nth-child(2) {
+  background-color: #f5b041;
+}
+
+.note-card button:nth-child(2):hover {
+  background-color: #e8a137;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 3px solid #000; /* Thicker black border */
+}
+
+.modal-content h2 {
+  color: #333;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 12px; /* Increased padding */
+  font-size: 16px;
+  border: 2px solid #000; /* Thicker black border */
+  border-radius: 8px;
+  outline: none;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #f5b041;
+}
+
+.modal-content button {
+  background-color: #f5b041;
+  color: white;
+  border: 3px solid #000; /* Thicker black border */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #e8a137;
+}
+
+.modal-content button:last-child {
+  background-color: #d9534f;
+}
+
+.modal-content button:last-child:hover {
+  background-color: #c9302c;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
+  .note-form {
+    padding: 20px;
+  }
+
+  .note-form input,
+  .note-form textarea {
+    font-size: 14px;
+  }
+
+  .note-form button {
+    padding: 10px 18px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .note-card {
+    padding: 15px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .note-form input,
+  .note-form textarea {
+    font-size: 14px;
+  }
+
+  .note-form button {
+    padding: 10px 16px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+}
+/* Heading Styles */
+.app-heading {
+  font-family: 'Playfair Display', serif; /* Beautiful font */
+  font-size: 48px; /* Larger size */
+  font-weight: 700; /* Bold */
+  text-align: center;
+  color: #333; /* Dark text color */
+  margin-bottom: 20px; /* Space below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
